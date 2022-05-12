@@ -24,9 +24,8 @@ def sleep(seconds):
 def scraping(webpage, page_number):
     next_page = webpage + str(page_number)
     response= requests.get(next_page)
-    from pprint import pp
-    pp(next_page)
-    pp(response)
+    print(next_page)
+    print(response)
     soup = BeautifulSoup(response.content, "html.parser")
     
     job_result_headings = soup.find_all(class_='job-result-heading__posted-by')
@@ -93,6 +92,6 @@ for x in range(1, 399):
     
 company_data = pd.DataFrame(data) 
 company_data.to_json("Reed_Companies.json")
-company_data.to_csv("Reed_Companies.json", index=True)
+company_data.to_csv("Reed_Companies.csv", index=True)
     
 # print(data)
