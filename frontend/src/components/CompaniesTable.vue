@@ -13,9 +13,6 @@
 <script>
 export default {
   name: "CompaniesTable",
-  created() {
-    console.log(this.companies);
-  },
   props: {
     table_title: String,
     companies: {
