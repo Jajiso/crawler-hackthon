@@ -82,12 +82,13 @@ def scraping(webpage, page_number):
             data.append({ 
                 "Company Name": company_name, 
                 "Size": company_size,
-                "Sector:":company_sector
+                "Sector:":company_sector,
+                "Location": company_location
             }) 
             
-for x in range(1, 10): 
-    if x != 1: 
-        sleep(5)
+for x in range(1, 100): 
+    if x % 5 == 0:
+        sleep(300)
     scraping('https://www.reed.co.uk/jobs/work-from-home-jobs?pageno=', x)
     
 company_data = pd.DataFrame(data) 
