@@ -4,25 +4,24 @@ import pandas as pd
 
 WEBSITE_URL = "https://weworkremotely.com" 
 FRONTEND_URL_JOBS = "https://weworkremotely.com/categories/remote-front-end-programming-jobs" 
-FRONTEND_URL_JOBS_1 = "https://weworkremotely.com/categories/remote-back-end-programming-jobs" 
-FRONTEND_URL_JOBS_2 = "https://weworkremotely.com/categories/remote-full-stack-programming-jobs" 
 response = requests.get(FRONTEND_URL_JOBS) 
-response_2 = requests.get(FRONTEND_URL_JOBS_1)
-response_3 = requests.get(FRONTEND_URL_JOBS_2)
-soup = BeautifulSoup(response.text, "html.parser") 
+
+s = BeautifulSoup(response.text, "html.parser") 
+
 
 def extract_link(item): 
 	item_link = item.find('a') 
 	return WEBSITE_URL + item_link.get("href")
 	
 
-features = soup.find_all(class_='feature') 
+features = s.find_all(class_='feature') 
 results = [extract_link(item) for item in features]
 
 
+
 data = []
-for j in results[:50]: 
-    another_response = requests.get(j)
+for item in results[:10]: 
+    another_response = requests.get(item)
     soup1 = BeautifulSoup(another_response.text, "html.parser")
     
     company_title_container = soup1.find(class_='listing-header-container')
