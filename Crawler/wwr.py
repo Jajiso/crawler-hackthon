@@ -20,7 +20,7 @@ results = [extract_link(item) for item in features]
 
 
 data = []
-for item in results[:10]: 
+for item in results[:100]: 
     another_response = requests.get(item)
     soup1 = BeautifulSoup(another_response.text, "html.parser")
     
