@@ -43,4 +43,5 @@ for item in results[:100]:
 
 company_data = pd.DataFrame(data) 
 company_data.to_json("FrontEnd_Companies.json")
+company_data.to_csv("FrontEnd_Companies.csv", index=False)
 
