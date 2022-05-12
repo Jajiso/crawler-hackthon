@@ -85,7 +85,7 @@ def scraping(webpage, page_number):
                 "Location": company_location
             }) 
             
-for x in range(1, 399): 
+for x in range(1, 20): 
     if x % 5 == 0:
         sleep(300)
     scraping('https://www.reed.co.uk/jobs/work-from-home-jobs?pageno=', x)
@@ -93,5 +93,3 @@ for x in range(1, 399):
 company_data = pd.DataFrame(data) 
 company_data.to_json("Reed_Companies.json")
 company_data.to_csv("Reed_Companies.csv", index=True)
-    
-# print(data)
