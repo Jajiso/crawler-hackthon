@@ -44,6 +44,18 @@ export default {
           label: "Website",
           field: "website"
         },
+        // {
+        //   name: "sector",
+        //   align: "left",
+        //   label: "Sector",
+        //   field: "sector"
+        // },
+        {
+          name: "size",
+          align: "left",
+          label: "Size",
+          field: "size"
+        },
       ],
     };
   },

@@ -1,6 +1,7 @@
 <template>
-  <q-page class="">
+  <q-page class="q-gutter-md">
     <CompaniesTable table_title="Website 1" :companies="website1_companies"/>
+    <CompaniesTable table_title="Website 2" :companies="website2_companies"/>
   </q-page>
 </template>
 
@@ -13,11 +14,13 @@ export default defineComponent({
   components: {CompaniesTable},
   data() {
     return {
-      website1_companies: null
+      website1_companies: null,
+      website2_companies: null,
     }
   },
   created() {
     this.website1_companies = this.$companies1
+    this.website2_companies = this.$companies2
   }
 
 })
