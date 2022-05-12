@@ -9,7 +9,7 @@
         <q-separator inset />
 
         <q-card-section>
-            <a :href="company.website">website</a>
+            <a :href="company.website" target="_blank">website</a>
         </q-card-section>
         </q-card>
     </div>
