@@ -86,7 +86,7 @@ def scraping(webpage, page_number):
                 "Location": company_location
             }) 
             
-for x in range(1, 100): 
+for x in range(1, 399): 
     if x % 5 == 0:
         sleep(300)
     scraping('https://www.reed.co.uk/jobs/work-from-home-jobs?pageno=', x)
