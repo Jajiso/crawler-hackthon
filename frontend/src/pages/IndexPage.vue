@@ -19,8 +19,8 @@ export default defineComponent({
     }
   },
   created() {
-    this.website1_companies = this.$companies1
-    this.website2_companies = this.$companies2
+    this.website1_companies = this.$filterDuplicates(this.$companies1)
+    this.website2_companies = this.$filterDuplicates(this.$companies2)
   }
 
 })

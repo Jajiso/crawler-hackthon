@@ -31,8 +31,25 @@ const formatCompanyJson2 = (bussinessObj) => {
     return result
 }
 
+const filterDuplicates = (listObj) => {
+
+    const result = listObj
+    console.log(result);
+    const filteredArr = result.reduce((acc, current) => {
+    const x = acc.find(item => item.title === current.title);
+        if (!x) {
+            return acc.concat([current]);
+        } else {
+            return acc;
+        }
+    }, []);
+
+    return filteredArr
+}
+
 export default boot(({ app }) => {
   app.config.globalProperties.$companies1 = formatCompanyJson(companiesObj1)
   app.config.globalProperties.$companies2 = formatCompanyJson2(companiesObj2)
+  app.config.globalProperties.$filterDuplicates = filterDuplicates
 })
 
