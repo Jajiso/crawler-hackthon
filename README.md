@@ -24,9 +24,3 @@
 > The product can be used in the future.
 > Data presented clearly and usable
 > Data represented visually
-
-Meet requirements
-
-    - to be legal
-    - does not put the user at risk
-    - is the tool exist as credited/ license
