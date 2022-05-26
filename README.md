@@ -1,15 +1,6 @@
 # crawler
 
-## Usability
-
-### Must meet tech requirements
-
-    - is the product secure/safe
-    - how scaleble is the product
-    - tests
-    - how up to date is the library / resource
-
-### Folowing data :
+## Folowing data :
 
     - 3 diffrent sites
     - Busniess Name
